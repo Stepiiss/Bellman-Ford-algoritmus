@@ -75,19 +75,17 @@ class Program
 {
     static void Main()
     {
-        Graph graph = new Graph(5);
-        graph.AddEdge(0, 1, 6);
-        graph.AddEdge(0, 3, 7);
-        graph.AddEdge(1, 2, 5);
-        graph.AddEdge(1, 3, 8);
-        graph.AddEdge(1, 4, -4);
-        graph.AddEdge(2, 1, -2);
-        graph.AddEdge(3, 2, -3);
-        graph.AddEdge(3, 4, 9);
-        graph.AddEdge(4, 0, 2);
-        graph.AddEdge(4, 2, 7);
+        Graph graph = new Graph(6);
+        graph.AddEdge(0, 1, 10);
+        graph.AddEdge(0, 2, 3);
+        graph.AddEdge(1, 3, 2);
+        graph.AddEdge(2, 1, 1);
+        graph.AddEdge(2, 3, 8);
+        graph.AddEdge(2, 4, 2);
+        graph.AddEdge(3, 4, 4);
+        graph.AddEdge(4, 5, 1);
+        graph.AddEdge(5, 3, 4);
 
-        //z jakeho vrcholu chci spustit algoritmus
-        graph.BellmanFord(2);
+        graph.BellmanFord(0); // Spuštění algoritmu z vrcholu 0
     }
 }
